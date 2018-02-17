@@ -10,7 +10,7 @@ source_file="res://Game/Actors/Blocks/brick.png"
 source_md5="d446a107c63c51f7812d70bf5f4f71be"
 
 dest_files=[ "res://.import/brick.png-22f2bbb4949a14abe93ba994f4428762.stex" ]
-dest_md5="f34706259e43acb4959702a20108337a"
+dest_md5="0d8f8e7fb7da32be2073ef18f71078e3"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
