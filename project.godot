@@ -13,6 +13,17 @@ config_version=3
 config/name="Knight of the Screw"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=800
+window/size/height=480
+window/size/resizable=false
+
+[input]
+
+jump=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
