@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Robot Title.ogg-f12608bc516edeb0825a366fc75bc315.oggstr"
+
+[deps]
+
+source_file="res://Game/Music/Robot Title.ogg"
+source_md5="0ff230fd1f5453a02592d09e61b60df1"
+
+dest_files=[ "res://.import/Robot Title.ogg-f12608bc516edeb0825a366fc75bc315.oggstr" ]
+dest_md5="446e45d30a30ffc7a95aa8181e3520f1"
+
+[params]
+
+loop=true
+loop_offset=0

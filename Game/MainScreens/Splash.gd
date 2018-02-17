@@ -1,11 +1,9 @@
 extends Node
 
 func _ready():
+	MusicManager.select_music(1)
+	MusicManager.play_music()
 	animate($Animar/ColorRect)
-	
-func _process(delta):
-#	$ColorRect.color = Color(randf(), randf(), randf(), 0.8)
-	pass
 	
 func animate(color_rect):
 	var trans_rand = randi() % 11
