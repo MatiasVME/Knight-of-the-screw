@@ -14,6 +14,10 @@ config/name="Knight of the Screw"
 run/main_scene="res://Game/MainScreens/Splash.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+MusicManager="*res://Game/Autoload/MusicManager.tscn"
+
 [display]
 
 window/size/width=800
