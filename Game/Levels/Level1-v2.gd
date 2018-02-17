@@ -10,7 +10,7 @@ var camera
 
 func _ready():
 	player = PlayerManager.player
-	player.position = Vector2(20, -100)
+	player.position = Vector2(600, -100)
 	
 	camera = Camera2D.new()
 	camera.offset.x = 400
