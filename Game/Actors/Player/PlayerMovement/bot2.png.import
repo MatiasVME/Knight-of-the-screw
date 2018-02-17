@@ -10,7 +10,7 @@ source_file="res://Game/Actors/Player/PlayerMovement/bot2.png"
 source_md5="ca0ff2830a689b00821a1d69a06e3132"
 
 dest_files=[ "res://.import/bot2.png-4dbeda746e7f15adf132412c6a871977.stex" ]
-dest_md5="ba83f8021ded0022f706ecd319d5fe96"
+dest_md5="7417abc59030f82f251e3ab92d0d38f9"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

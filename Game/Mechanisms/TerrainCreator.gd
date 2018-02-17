@@ -9,6 +9,7 @@ var player
 
 func _ready():
 	player = PlayerManager.player
+	player.position = Vector2(20, -100)
 	
 func _process(delta):
 	build_floor()
