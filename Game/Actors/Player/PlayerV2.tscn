@@ -15,10 +15,11 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 64 )
+radius = 16.0
+height = 32.0
 
 [node name="PlayerV2" type="RigidBody2D"]
 
@@ -32,8 +33,8 @@ bounce = 0.3
 gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
+contacts_reported = 4
+contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
@@ -45,7 +46,7 @@ _sections_unfolded = [ "Angular", "Applied Forces", "Linear" ]
 
 [node name="Imagen" type="AnimatedSprite" parent="." index="0"]
 
-scale = Vector2( 8, 8 )
+scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "default"
 _sections_unfolded = [ "Transform" ]

@@ -12,3 +12,9 @@ func _physics_process(delta):
 		self.apply_impulse(Vector2(0, 0), Vector2(0, -5))
 	elif Input.is_action_pressed("ui_down"):
 		self.apply_impulse(Vector2(0, 0), Vector2(0, 5))
+
+	for body in self.get_colliding_bodies():
+		print("collision")
+		if body.is_in_group("Enemies"):
+			print("enemies!!!")
+			self.apply_impulse(Vector2(0, 0), Vector2(rand_range(-500, 500), rand_range(-500, 500)))

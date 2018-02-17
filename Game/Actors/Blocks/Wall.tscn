@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="LineShape2D" id=1]
+
+custom_solver_bias = 0.0
+normal = Vector2( 0, -1 )
+d = 0.0
+
+[node name="Wall" type="Node2D" index="0"]
+
+[node name="Wall" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="Collision" type="CollisionShape2D" parent="Wall" index="0"]
+
+position = Vector2( 1.0147e-05, 232.137 )
+rotation = -1.5708
+scale = Vector2( 2.06929, 1 )
+shape = SubResource( 1 )
+one_way_collision = true
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+

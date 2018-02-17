@@ -6,9 +6,11 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 16, 16 )
 
-[node name="EnemyObject" type="RigidBody2D"]
+[node name="EnemyObject" type="RigidBody2D" groups=[
+"Enemies",
+]]
 
 input_pickable = false
 collision_layer = 1
@@ -33,7 +35,9 @@ _sections_unfolded = [ "Collision", "Material", "Transform", "Visibility", "Z In
 
 [node name="Image" type="Sprite" parent="." index="0"]
 
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]
 
