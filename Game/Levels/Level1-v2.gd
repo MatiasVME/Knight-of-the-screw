@@ -11,7 +11,6 @@ var camera
 func _ready():
 	player = PlayerManager.player
 	player.position = Vector2(20, -100)
-	add_child(player)
 	
 	camera = Camera2D.new()
 	camera.offset.x = 400
@@ -20,7 +19,9 @@ func _ready():
 	camera.limit_top = -50
 	camera.limit_smoothed = true
 	camera.smoothing_enabled = true
-	add_child(camera)
+	
+	player.add_child(camera)
+	add_child(player)
 	
 func _physics_process(delta):
 	build_floor()

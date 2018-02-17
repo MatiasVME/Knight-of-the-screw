@@ -4,6 +4,8 @@ func _ready():
 	$Imagen.playing = true
 
 func _physics_process(delta):
+	self.apply_impulse(Vector2(0, 0), Vector2(0.5, 0))
+	
 	if Input.is_action_pressed("ui_right"):
 		self.apply_impulse(Vector2(0, 0), Vector2(5, 0))
 	if Input.is_action_pressed("ui_up"):
