@@ -16,3 +16,6 @@ func animate(color_rect):
 	$Tween.interpolate_property(color_rect, "color", init_color, 
 			finish_color, 3, trans_rand, ease_rand)
 	$Tween.start()
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://Game/MainScreens/Menu.tscn")

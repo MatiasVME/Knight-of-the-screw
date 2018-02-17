@@ -8,13 +8,10 @@
 
 config_version=3
 
-[Cell]
-
-Resizable=false
-
 [application]
 
 config/name="Knight of the Screw"
+run/main_scene="res://Game/MainScreens/Splash.tscn"
 config/icon="res://icon.png"
 
 [display]
