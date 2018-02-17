@@ -27,12 +27,18 @@ func _ready():
 #	ins_enemy_objects.global_position.x = camera.global_position.x
 	
 #	camera.add_child(ins_enemy_objects)
+
 	player.add_child(camera)
 	add_child(player)
+	
+	$EnemyObjectsCreator.set_player(player)
 	
 func _physics_process(delta):
 	build_floor()
 	build_roof()
+	
+#	$EnemyObjectsCreator.global_position.x = player.global_position.x + 100
+#	$EnemyObjectsCreator.global_position.y = 100
 
 func build_floor():
 	if player.position.x + Main.RES_X * blocks_floor_increment:

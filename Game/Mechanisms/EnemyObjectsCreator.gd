@@ -4,6 +4,7 @@ var rec_object = load("res://Game/Actors/Enemies/EnemyObject.tscn")
 
 export (int) var wait_time = 3
 
+var player setget set_player
 var can_spawn = false
 
 func _ready():
@@ -16,17 +17,20 @@ func _physics_process(delta):
 		can_spawn = false
 		
 func spawn_object():
-	var pos_x = Main.RES_X
+	var pos_x = Main.RES_X + player.position.x
 	var pos_y = rand_range(100, 200)
 	
 	var ins_object = rec_object.instance()
 	ins_object.position = Vector2(pos_x, pos_y)
-	add_child(ins_object)
+	get_parent().add_child(ins_object)
 	ins_object.apply_impulse(Vector2(0, 0),
-			Vector2(rand_range(-100, -200), rand_range(-30, -100)))
+			Vector2(rand_range(-100, -250), rand_range(-30, -100)))
 	ins_object.angular_velocity = rand_range(-50, 50)
 	ins_object.bounce = randf()
 
+func set_player(_player):
+	player = _player
+
 func _on_Timer_timeout():
-	can_spawn = true
-	print("hola")
+	if player != null:
+		can_spawn = true

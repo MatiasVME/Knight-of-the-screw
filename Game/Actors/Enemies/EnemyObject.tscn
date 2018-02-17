@@ -13,7 +13,7 @@ extents = Vector2( 32, 32 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-mode = 0
+mode = 2
 mass = 1.0
 friction = 1.0
 bounce = 0.0
@@ -29,6 +29,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Image" type="Sprite" parent="." index="0"]
 
