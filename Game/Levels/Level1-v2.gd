@@ -26,7 +26,7 @@ func _ready():
 #	var ins_enemy_objects = rec_enemy_object.instance()
 #	ins_enemy_objects.global_position.x = camera.global_position.x
 	
-	camera.add_child(ins_enemy_objects)
+#	camera.add_child(ins_enemy_objects)
 	player.add_child(camera)
 	add_child(player)
 	

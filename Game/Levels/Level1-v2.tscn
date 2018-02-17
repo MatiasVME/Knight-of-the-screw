@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Game/Levels/Level1-v2.gd" type="Script" id=1]
 
-[node name="Level1-v2" type="Node2D" index="0"]
+[node name="Level1-v2" type="Node2D"]
 
 script = ExtResource( 1 )
 
