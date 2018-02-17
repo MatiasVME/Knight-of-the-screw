@@ -6,6 +6,7 @@
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
+wait_time = 3
 
 [node name="Timer" type="Timer" parent="." index="0"]
 

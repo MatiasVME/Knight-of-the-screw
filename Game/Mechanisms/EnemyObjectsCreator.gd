@@ -2,10 +2,13 @@ extends Node2D
 
 var rec_object = load("res://Game/Actors/Enemies/EnemyObject.tscn")
 
+export (int) var wait_time = 3
+
 var can_spawn = false
 
 func _ready():
 	randomize()
+	$Timer.wait_time = wait_time
 	
 func _physics_process(delta):
 	if can_spawn:
