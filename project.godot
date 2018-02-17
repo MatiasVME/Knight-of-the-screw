@@ -8,6 +8,10 @@
 
 config_version=3
 
+[Cell]
+
+Resizable=false
+
 [application]
 
 config/name="Knight of the Screw"
