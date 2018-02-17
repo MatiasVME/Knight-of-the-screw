@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Game/Actors/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[sub_resource type="RectangleShape2D" id=1]
 
-position = Vector2( -81.839, 379.131 )
+custom_solver_bias = 0.0
+extents = Vector2( 31.6884, 31.7993 )
+
+[node name="Player" type="KinematicBody2D"]
+
+position = Vector2( -103.916, 361.304 )
+scale = Vector2( 0.310101, 0.44292 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -17,5 +23,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="col" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
 
 
