@@ -18,7 +18,7 @@ use_filter = false
 font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Splash" type="Node" index="0"]
+[node name="Splash" type="Node"]
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 

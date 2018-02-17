@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Game/Tiles/Lvl1-Map/sprites.png" type="Texture" id=1]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
@@ -30,11 +30,10 @@ bounce = 0.0
 
 [node name="col" type="CollisionShape2D" parent="spr/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="spr2" type="Sprite" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 21, 0 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -54,32 +53,6 @@ bounce = 0.0
 
 [node name="col" type="CollisionShape2D" parent="spr2/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="spr3" type="Sprite" parent="." index="2"]
-
-editor/display_folded = true
-position = Vector2( 43, 0 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 48, 0, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="spr3" index="0"]
-
-editor/display_folded = true
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="col" type="CollisionShape2D" parent="spr3/StaticBody2D" index="0"]
-
-position = Vector2( 0, -4.75 )
-scale = Vector2( 1, 0.431818 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 
