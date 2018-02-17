@@ -6,7 +6,7 @@ custom_solver_bias = 0.0
 normal = Vector2( 0, -1 )
 d = 0.0
 
-[node name="Wall" type="Node2D" index="0"]
+[node name="Wall" type="Node2D"]
 
 [node name="Wall" type="KinematicBody2D" parent="." index="0"]
 
