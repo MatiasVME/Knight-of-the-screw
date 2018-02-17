@@ -16,6 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+Main="*res://Game/Autoload/Main.gd"
 MusicManager="*res://Game/Autoload/MusicManager.tscn"
 
 [display]

@@ -3,6 +3,8 @@ extends Node
 func _ready():
 	MusicManager.select_music(1)
 	MusicManager.play_music()
+	
+	randomize()
 	animate($Animar/ColorRect)
 	
 func animate(color_rect):
