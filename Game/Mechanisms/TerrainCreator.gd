@@ -1,4 +1,4 @@
-# TODO: Quedan muchas cosas que hacer acá :P
+# TODO: Esto no sirve :P
 
 extends Node2D
 

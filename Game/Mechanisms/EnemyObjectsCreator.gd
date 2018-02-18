@@ -18,7 +18,7 @@ func _physics_process(delta):
 		
 func spawn_object():
 	var pos_x = Main.RES_X + player.position.x
-	var pos_y = rand_range(100, 200)
+	var pos_y = rand_range(100, 400)
 	
 	var ins_object = rec_object.instance()
 	ins_object.position = Vector2(pos_x, pos_y)

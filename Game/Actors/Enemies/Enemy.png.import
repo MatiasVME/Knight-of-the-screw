@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.png-bf4120b2e312c64afa540c2a1e1a7b7f.stex"
+path="res://.import/Enemy.png-8d4ddaa6a05d05b2f5c8db38d4c54a89.stex"
 
 [deps]
 
-source_file="res://Game/Actors/Blocks/bg.png"
-source_md5="4c66cf395d4ff37c546a458b17d04cb8"
+source_file="res://Game/Actors/Enemies/Enemy.png"
+source_md5="ae7e641067601e2184afcade49abd283"
 
-dest_files=[ "res://.import/bg.png-bf4120b2e312c64afa540c2a1e1a7b7f.stex" ]
-dest_md5="8effb57ff0d98430583c922bc9291564"
+dest_files=[ "res://.import/Enemy.png-8d4ddaa6a05d05b2f5c8db38d4c54a89.stex" ]
+dest_md5="84511021bbc8c9d37c7f0f4d181de883"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

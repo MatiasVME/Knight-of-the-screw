@@ -35,6 +35,9 @@ func _physics_process(delta):
 	build_roof()
 
 func build_floor():
+	if player == null:
+		return
+	
 	if player.position.x + Main.RES_X * blocks_floor_increment:
 		var ins_block = rec_block.instance()
 		ins_block.position = Vector2(blocks_floor_increment * 64 * 1 + 1, Main.RES_Y - 32)
@@ -42,6 +45,9 @@ func build_floor():
 		blocks_floor_increment += 1
 
 func build_roof():
+	if player == null:
+		return
+	
 	if player.position.x + Main.RES_X * blocks_roof_increment:
 		var ins_block = rec_block.instance()
 		ins_block.position = Vector2(blocks_roof_increment * 64 * 1 + 1, 0)
