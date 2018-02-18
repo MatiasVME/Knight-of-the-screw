@@ -21,7 +21,7 @@ custom_solver_bias = 0.0
 radius = 16.0
 height = 16.472
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 
 resource_name = "dead"
 length = 1.0
@@ -71,9 +71,8 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.289062, 1, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=5]
 
-resource_name = "hit"
 length = 0.5
 loop = false
 step = 0.1
@@ -90,7 +89,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="PlayerV2" type="RigidBody2D"]
+[node name="PlayerV2" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -138,9 +137,9 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/dead = SubResource( 5 )
+anims/dead = SubResource( 3 )
 anims/heal = SubResource( 4 )
-anims/hit = SubResource( 3 )
+anims/hit = SubResource( 5 )
 blend_times = [  ]
 
 [connection signal="timeout" from="ReduceSize" to="." method="_on_ReduceSize_timeout"]
