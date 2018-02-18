@@ -9,6 +9,8 @@ var blocks_roof_increment = 1
 var player
 var camera
 
+var dead_ot = true
+
 func _ready():
 	player = PlayerManager.player
 	player.position = Vector2(600, 100)
@@ -33,6 +35,7 @@ func _ready():
 func _physics_process(delta):
 	build_floor()
 	build_roof()
+	menu() # Verifica si muestra el menú o no
 
 func build_floor():
 	if player == null:
@@ -53,3 +56,24 @@ func build_roof():
 		ins_block.position = Vector2(blocks_roof_increment * 64 * 1 + 1, 0)
 		add_child(ins_block)
 		blocks_roof_increment += 1
+		
+func menu():
+	if Main.is_dead and dead_ot:
+		$MenuLayer/Menu.disabled = false
+		$Anim.play("show_menu_button")
+		dead_ot = false
+
+func _on_Menu_pressed():
+	$MenuLayer/Menu.disabled = true
+	$Anim.play_backwards("show_menu_button")
+	
+	player.mode = player.MODE_KINEMATIC
+	player.position = Vector2(600, 100)
+	player.mode = player.MODE_CHARACTER
+	print(player.position)
+	player.resurrect()
+	dead_ot = true
+	
+	
+	# get_tree().reload_current_scene()
+	# get_tree().change_scene("res://Game/MainScreens/Menu.tscn")

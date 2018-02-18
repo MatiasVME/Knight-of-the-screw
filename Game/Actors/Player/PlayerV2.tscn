@@ -89,7 +89,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="PlayerV2" type="RigidBody2D" index="0"]
+[node name="PlayerV2" type="RigidBody2D"]
 
 input_pickable = false
 collision_layer = 1
