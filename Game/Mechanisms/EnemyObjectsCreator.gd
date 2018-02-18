@@ -13,8 +13,26 @@ func _ready():
 	
 func _physics_process(delta):
 	if can_spawn:
-		spawn_object()
-		can_spawn = false
+		if LevelManager.current_level == 1:
+			pass
+		elif LevelManager.current_level == 2:
+			spawn_object()
+			can_spawn = false
+		elif LevelManager.current_level == 3:
+			spawn_object()
+			spawn_object()
+			can_spawn = false
+		elif LevelManager.current_level == 4:
+			spawn_object()
+			spawn_object()
+			spawn_object()
+			can_spawn = false
+		elif LevelManager.current_level == 5:
+			spawn_object()
+			spawn_object()
+			spawn_object()
+			spawn_object()
+			can_spawn = false
 		
 func spawn_object():
 	var pos_x = Main.RES_X + player.position.x

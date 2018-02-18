@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+var reset_movement = false
+
 func _ready():
 	$Imagen.playing = true
 
@@ -17,14 +19,19 @@ func _physics_process(delta):
 		self.apply_impulse(Vector2(0, 0), Vector2(0, 5))
 	
 	# Para testiar
-#	if Input.is_action_pressed("ui_accept"):
-#		$Imagen.scale.x += 0.3
-#		$Imagen.scale.y += 0.3
-#		$Collision.scale.x += 0.12
-#		$Collision.scale.y += 0.12
+	if Input.is_action_pressed("ui_accept"):
+		$Imagen.scale.x += 0.3
+		$Imagen.scale.y += 0.3
+		$Collision.scale.x += 0.12
+		$Collision.scale.y += 0.12
 	
 	hit() # Ve se choca con algo
 	dead() # Ve si puede morir
+
+func _integrate_forces(state):
+	if reset_movement:
+		state.transform.origin = Vector2(600, 100)
+		reset_movement = false
 
 func hit():
 	for body in self.get_colliding_bodies():
@@ -36,7 +43,7 @@ func hit():
 			$Collision.scale.y += 0.12
 			
 			$Anim.play("hit")
-			
+	
 func dead():
 	if $Imagen.scale.x > 13 and not $Anim.is_playing():
 		$Anim.play("dead")

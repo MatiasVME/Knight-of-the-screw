@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Levc - Robo Running.ogg-47b5fc67460e182d361f24d077879178.oggstr"
+
+[deps]
+
+source_file="res://Game/Music/Levc - Robo Running.ogg"
+source_md5="2d04a0a3a5a9624ae8aaba1ceb12c1c9"
+
+dest_files=[ "res://.import/Levc - Robo Running.ogg-47b5fc67460e182d361f24d077879178.oggstr" ]
+dest_md5="fe04a2ba060419f4e6f25bbd17d47fb7"
+
+[params]
+
+loop=true
+loop_offset=0

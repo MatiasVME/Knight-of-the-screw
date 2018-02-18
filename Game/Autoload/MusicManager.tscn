@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Game/Autoload/MusicManager.gd" type="Script" id=1]
 [ext_resource path="res://Game/Music/Robot Title.ogg" type="AudioStream" id=2]
-[ext_resource path="res://Game/Music/Levc - Megaman.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Game/Music/Levc - Robo Running.ogg" type="AudioStream" id=3]
 
-[node name="MusicManager" type="Node" index="0"]
+[node name="MusicManager" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -16,7 +16,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Megaman" type="AudioStreamPlayer" parent="." index="1"]
+[node name="RoboRunning" type="AudioStreamPlayer" parent="." index="1"]
 
 stream = ExtResource( 3 )
 volume_db = 0.0

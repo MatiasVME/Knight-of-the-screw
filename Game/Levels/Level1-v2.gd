@@ -10,6 +10,7 @@ var player
 var camera
 
 var dead_ot = true
+var levels_ot = [true, true, true, true, true]
 
 func _ready():
 	player = PlayerManager.player
@@ -68,21 +69,43 @@ func menu():
 		dead_ot = false
 
 func detect_level():
-#	if player.position.x >= 2000:
-#		print("level1")
-	pass
+	if levels_ot[0] and LevelManager.current_level == 1:
+		$MenuLayer/LevelLabel.text = "Level " + str(LevelManager.current_level)
+		$AnimLabel.play("show_label")
+		levels_ot[0] = false
+	elif levels_ot[1] and LevelManager.current_level == 2:
+		$MenuLayer/LevelLabel.text = "Level " + str(LevelManager.current_level)
+		$AnimLabel.play_backwards("show_label")
+		levels_ot[1] = false
+	elif levels_ot[2] and LevelManager.current_level == 3:
+		$MenuLayer/LevelLabel.text = "Level " + str(LevelManager.current_level)
+		$AnimLabel.play("show_label")
+		levels_ot[2] = false
+	elif levels_ot[3] and LevelManager.current_level == 4:
+		$MenuLayer/LevelLabel.text = "Level " + str(LevelManager.current_level)
+		$AnimLabel.play_backwards("show_label")
+		levels_ot[3] = false
+	elif levels_ot[4] and LevelManager.current_level == 5:
+		$MenuLayer/LevelLabel.text = "Level " + str(LevelManager.current_level)
+		$AnimLabel.play("show_label")
+		levels_ot[4] = false
 
 func _on_Menu_pressed():
 	$MenuLayer/Menu.disabled = true
 	$Anim.play_backwards("show_menu_button")
-	
-	player.mode = player.MODE_KINEMATIC
-	player.position = Vector2(600, 100)
-	player.mode = player.MODE_CHARACTER
-	print(player.position)
+
+	player.reset_movement = true
 	player.resurrect()
 	dead_ot = true
 	
+	var i = 0
+	while i < levels_ot.size():
+		levels_ot[i] = true
+		
+		i += 1
+		
+	$EnemyObjectsCreator.can_spawn = true
+	LevelManager.reset_levels()
 	
-	# get_tree().reload_current_scene()
-	# get_tree().change_scene("res://Game/MainScreens/Menu.tscn")
+func _on_SpeedChange_timeout():
+	$MenuLayer/Speed.text = "Speed: " + str(int(player.linear_velocity.x))

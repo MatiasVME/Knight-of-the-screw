@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 Main="*res://Game/Autoload/Main.gd"
 PlayerManager="*res://Game/Autoload/PlayerManager.gd"
 MusicManager="*res://Game/Autoload/MusicManager.tscn"
+LevelManager="*res://Game/Autoload/LevelManager.gd"
 
 [display]
 
