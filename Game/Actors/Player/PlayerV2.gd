@@ -17,11 +17,11 @@ func _physics_process(delta):
 		self.apply_impulse(Vector2(0, 0), Vector2(0, 5))
 	
 	# Para testiar
-	if Input.is_action_pressed("ui_accept"):
-		$Imagen.scale.x += 0.3
-		$Imagen.scale.y += 0.3
-		$Collision.scale.x += 0.12
-		$Collision.scale.y += 0.12
+#	if Input.is_action_pressed("ui_accept"):
+#		$Imagen.scale.x += 0.3
+#		$Imagen.scale.y += 0.3
+#		$Collision.scale.x += 0.12
+#		$Collision.scale.y += 0.12
 	
 	hit() # Ve se choca con algo
 	dead() # Ve si puede morir

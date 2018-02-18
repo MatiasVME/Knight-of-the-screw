@@ -32,10 +32,14 @@ func _ready():
 	
 	$EnemyObjectsCreator.set_player(player)
 	
+	MusicManager.select_music(2)
+	MusicManager.play_music()
+	
 func _physics_process(delta):
 	build_floor()
 	build_roof()
 	menu() # Verifica si muestra el menú o no
+	detect_level() # Detecta a que nivel llega
 
 func build_floor():
 	if player == null:
@@ -62,6 +66,11 @@ func menu():
 		$MenuLayer/Menu.disabled = false
 		$Anim.play("show_menu_button")
 		dead_ot = false
+
+func detect_level():
+#	if player.position.x >= 2000:
+#		print("level1")
+	pass
 
 func _on_Menu_pressed():
 	$MenuLayer/Menu.disabled = true

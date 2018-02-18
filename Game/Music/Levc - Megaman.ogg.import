@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Levc - Megaman.ogg-95342ed03c3da1ed8069709b0eb16396.oggstr"
+
+[deps]
+
+source_file="res://Game/Music/Levc - Megaman.ogg"
+source_md5="ef8b0cce86129de13c2edf3cef5cd93f"
+
+dest_files=[ "res://.import/Levc - Megaman.ogg-95342ed03c3da1ed8069709b0eb16396.oggstr" ]
+dest_md5="17dbcb00a54205ef844914d2e8f494b6"
+
+[params]
+
+loop=true
+loop_offset=0
