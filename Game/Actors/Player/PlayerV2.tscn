@@ -19,9 +19,9 @@ animations = [ {
 
 custom_solver_bias = 0.0
 radius = 16.0
-height = 32.0
+height = 16.472
 
-[node name="PlayerV2" type="RigidBody2D"]
+[node name="PlayerV2" type="RigidBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1

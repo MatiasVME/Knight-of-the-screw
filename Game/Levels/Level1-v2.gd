@@ -1,9 +1,7 @@
-# TODO: Quedan muchas cosas que hacer acá :P
-
 extends Node2D
 
 var rec_block = load("res://Game/Actors/Blocks/Brick.tscn")
-#var rec_enemy_object = load("res://Game/Actors/Enemies/EnemyObject.tscn")
+var rec_background = load("res://Game/Backgrounds/background.tscn")
 
 var blocks_floor_increment = 1
 var blocks_roof_increment = 1
@@ -16,18 +14,17 @@ func _ready():
 	player.position = Vector2(600, 100)
 	
 	camera = Camera2D.new()
-	camera.offset.x = 400
-	camera.offset.y = -70
+	camera.offset.x = 300
+	camera.offset.y = -110
 	camera.current = true
 	camera.limit_top = 0
 	camera.limit_smoothed = true
 	camera.smoothing_enabled = true
 	
-#	var ins_enemy_objects = rec_enemy_object.instance()
-#	ins_enemy_objects.global_position.x = camera.global_position.x
-#	camera.add_child(ins_enemy_objects)
-
-#	var ins_wall = rec_wall.instance()
+	var ins_background = rec_background.instance()
+	ins_background.layer = -1
+	player.add_child(ins_background)
+	
 	player.add_child(camera)
 	add_child(player)
 	
@@ -36,9 +33,6 @@ func _ready():
 func _physics_process(delta):
 	build_floor()
 	build_roof()
-	
-#	$EnemyObjectsCreator.global_position.x = player.global_position.x + 100
-#	$EnemyObjectsCreator.global_position.y = 100
 
 func build_floor():
 	if player.position.x + Main.RES_X * blocks_floor_increment:

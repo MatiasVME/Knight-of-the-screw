@@ -18,8 +18,8 @@ func _physics_process(delta):
 		if body.is_in_group("Enemies"):
 			print("enemies!!!")
 			self.apply_impulse(Vector2(0, 0), Vector2(rand_range(-250, 250), rand_range(-250, 250)))
-			$Imagen.scale.x += 0.05
-			$Imagen.scale.y += 0.05
-			$Collision.scale.x += 0.05
-			$Collision.scale.y += 0.05
+			$Imagen.scale.x += 0.3
+			$Imagen.scale.y += 0.3
+			$Collision.scale.x += 0.12
+			$Collision.scale.y += 0.12
 			
